@@ -1,0 +1,56 @@
+<head>
+
+    <script>
+
+        function boucle(iPeriode, fnCbTraitement, fnCbContinuer = true) {
+
+            while (fnCbContinuer() == true) {
+
+                setInterval(function () {
+                    fnCbTraitement();
+                }, iPeriode);
+
+            }
+
+            // Objectif : déclencher un appel à la fonction fnCbTraitement
+            // toutes les iPeriode secondes,
+            // tant que fnCbContinuer renvoie vrai
+
+            // fnCbTraitement est une fonction de rappel
+            // "CALLBACK" : elle sera appelée plus tard
+            // pour l'appeler, il suffit d'ajouter les parenthèses
+
+            // rendre le 3ème argument optionnel
+
+            // effectue un appel à une fonction callback de traitement
+            // tant que la fonction gérant la poursuite de boucle renvoie vrai
+        }
+
+
+        function hello() {
+            console.log("Hello");
+        }
+
+        function adios() {
+            return true;
+        }
+
+        boucle(1000, hello, adios);
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
